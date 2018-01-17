@@ -2,7 +2,7 @@
 - title:  "LambdaCase in the wild"
   page:   LambdaCase
   source: LambdaCase.md
-  tags:   [ haskell, hackage ]
+  tags:   [ TEST ]
   date:
     month: 1
     day:   8
@@ -11,9 +11,9 @@
 - title:  "Putting the \"algebra\" back in F-algebras"
   page:   test
   source: test.md
-  tags:   [ haskell, "c++", "f-algebra" ]
+  tags:   [ TEST ]
   date:
     month: 1
-    day:   17
+    day:   13
     year:  2018
 
