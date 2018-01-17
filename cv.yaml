@@ -1,0 +1,260 @@
+work-categories:
+
+- category: Software Development
+  duration: 6 years (+20 amateur)
+  
+- category: Teaching
+  duration: 9 years
+  
+- category: Project Management
+  duration: 3 years
+  
+history:
+
+- organization: GrammaTech, Inc.
+  location:     Ithaca NY, USA
+  when:         "2012 -- present"
+  
+  positions:
+    - title:    Senior Scientist
+      when:     "2014 -- present"
+      tasks:
+      
+        - task:        Authoring research proposals
+          when:        "2014 -- present"
+          category:    Project Management
+          description: >
+                       Primary or contributing author to six proposals
+                       in response to government solicitations, with a
+                       win ratio of 66%. Performed as principal investigator
+                       on three of the resulting projects.
+                       
+        - task:        Customizable iOS security policies (PI)
+          when:        "2017 -- present"
+          category:    Software Development
+          description: >
+                       Principal investigator and architect of a system for
+                       injecting custom security policy enforcement into
+                       off-the-shelf iOS apps.
+
+        - task:        "Simplifying patch development for legacy binaries (PI, Phase I and II)"
+          when:        "2016 -- present"
+          category:    Software Development
+          description: >
+                       Principal investigator and architect of a platform that
+                       lowers the barrier-to-entry for binary rewriting and
+                       patching of embedded systems.
+        
+        - task:        "Logical representations of cyber-physical systems"
+          when:        "2016 -- present"
+          category:    Software Development
+          description: >
+                       Developed a range of techniques for automatically extracting
+                       models of machine-code functions, suitable for interacting with
+                       off-the-shelf SMT solvers and model checkers.
+
+        - task:        Malware trend prediction
+          when:        "2016"
+          category:    Software Development
+          description: >
+                       Designed and developed an automated tool for trend prediction,
+                       situational awareness, and family classification of malware.
+
+        - task:        Novel decompilation techniques
+          when:        "2015 -- 2016"
+          category:    Software Development
+          description: >
+                       Worked with a team of developers to create novel methods for
+                       exact decompilation of binary code to C.
+
+        - task:        Type inference for machine code
+          when:        "2014 -- 2015"
+          category:    Software Development
+          description: >
+                       Developed and implemented a best-in-class algorithm for inferring
+                       types and most-general interfaces for machine-code functions.
+                       
+    - title:    Software Engineer
+      when:     "2012 -- 2014"
+      tasks:
+
+        - task:        Static analysis of machine code
+          when:        "2012 -- 2014"
+          category:    Software Development
+          description: >
+                       Designed and implemented a variety of novel static analyses for
+                       stripped binary code. Optimized and debugged existing static
+                       analysis implementations.
+
+        - task:        "Un-linking compiled binaries"
+          when:        "2012 -- 2013"
+          category:    Software Development
+          description: >
+                       Continued development, testing, and client interactions for an
+                       inverse linker, producing object files and headers from
+                       compiled binaries.
+
+- organization: Mount Holyoke College
+  location:     South Hadley MA, USA
+  when:         "2010 -- 2012"
+
+  positions:
+    - title:    Visiting Assistant Professor
+      when:     "2010 -- 2012"
+      tasks:
+      
+        - task:        Teaching and course development
+          when:        "2010 -- 2012"
+          category:    Teaching
+          description: >
+                       Developed and taught a variety of courses, including Differential
+                       Equations, Applied Mathematics, Linear Algebra, Complex Analysis,
+                       and the calculus sequence. Developed new teaching material and
+                       methodology making use of the SageMath web notebook interface.
+                       Developed novel, open-ended assessments for Calculus, Linear Algebra,
+                       and Differential Equations.
+
+        - task:        Research supervisor
+          when:        "2012"
+          category:    Project Management
+          description: >
+                       Planned and supervised an REU program (Research Experience for
+                       Undergraduates) on sub-Riemannian geometries.
+
+
+- organization: Cornell University
+  location:     Ithaca NY, USA
+  when:         "2004 -- 2010"
+
+  positions:
+    - title:    SMI Research Supervisor
+      when:     "2009, 2010"
+      tasks:
+
+        - task:        Research planning and supervision
+          when:        "2009, 2010"
+          category:    Project Management
+          description: >
+                       Planned and supervised seven undergraduate summer research projects
+                       on a variety of topics, including conjectures on the Schramm-Loewner
+                       equation, minimal surfaces, discrete differential geometry, and
+                       combinatorics.
+                       
+    - title:    Research Assistant
+      when:     "2009"
+      tasks:
+      
+        - task:        FractalStream
+          when:        "2009"
+          category:    Software Development
+          description: >
+                       Created a user-programmable and extensible application (FractalStream)
+                       for the investigation of real and complex dynamical systems in one or
+                       more variables.
+
+    - title:    Instructor and TA
+      when:     "2004 -- 2009"
+      tasks:
+
+        - task:        Instructor
+          when:        "2005 -- 2008"
+          category:    Teaching
+          description: >
+                       Developed, taught, and assisted with a variety of courses, including:
+                       calculus, discrete mathematics, differentiable manifolds, and a
+                       unified Theoretical Linear Algebra and Calculus sequence. Courses of
+                       particular note are mentioned below.
+
+        - task:        Experimental Calculus I course
+          when:        "2007"
+          category:    Teaching
+          description: >
+                       Developed and taught an experimental Calculus I course, using
+                       nilpotent infinitesimals.
+
+        - task:        Freshman Writing Seminar
+          when:        "2008"
+          category:    Teaching
+          description: >
+                       Developed and taught a freshman writing seminar, "Experiencing
+                       Mathematics Through Writing".
+
+skills:
+
+  - category: Broadly
+    skill:    |
+              ▻ Mathematics, software development, exposition.
+              ▻ Program analysis, binary analysis, machine learning.
+              ▻ Software design, research and development, project management.
+              ▻ Differential equations, differential geometry, linear algebra, category theory.
+
+  - category: Preferred languages
+    skill:    "Haskell, C++, Python."
+
+  - category: Other languages
+    skill:    "Objective C, machine code (x86, ARM), C, Scheme, Common Lisp, OCaml."
+
+  - category: Expository
+    skill:    "Public speaking, teaching complex subject matter, proposal writing, informal writing."
+
+  - category: Less marketable
+    skill:    "Clawhammer banjo, baking, Go (AGA 2 dan), sailing (poorly)."
+
+publications:
+
+  - title:  "Evolving Exact Decompilation"
+    when:   "2018"
+    where:  in BAR 2018, to appear.
+
+  - title:  "Polymorphic Type-Inference for Machine Code"
+    when:   "2016"
+    where:  >
+            in Proceedings of the 37th ACM SIGPLAN Conference on Programming Language
+            Design and Implementation (PLDI '16).
+    url:    "https://arxiv.org/abs/1603.05495"
+
+  - title:  "Geometric Bäcklund Transformations in Homogeneous Spaces"
+    when:   "2012"
+    where:  >
+            doctoral thesis. Cornell University.
+    url:    "https://ecommons.cornell.edu/bitstream/handle/1813/17772/Noonan%2C%20Matthew.pdf?sequence=1"
+    
+  - title:  "Calculus on Categories"
+    when:   "2006"
+    where:  >
+            preprint.
+    url:    "http://www.math.cornell.edu/~noonan/halifax.pdf"
+    
+honors:
+
+  - >
+    Students from the 2009 and 2010 Summer Mathematics Institute research projects
+    won three poster awards and two presentation awards at the national SACNAS
+    conference (Society for Advancement of Chicanos and Native Americans in Science).
+
+  - >
+    Best Olivetti lecture, Fall 2006. For "A Soapy Guide to Geometry".
+
+  - >
+    Best Olivetti lecture, Fall 2005. For "Dividing by Small Numbers".
+
+  - >
+    NSF VIGRE Graduate Fellowship, 2004 -- 2006.
+
+education:
+
+- degree:  "Ph.D."
+  subject: Mathematics
+  from:    Cornell University
+  when:    "2010"
+  details: "Advisor: John Hamal Hubbard"
+
+- degree:  "M.A."
+  subject: Mathematics
+  from:    Cornell University
+  when:    "2006"
+
+- degree:  "B.A."
+  subject: Mathematics
+  from:    Hampshire College
+  when:    "2003"
