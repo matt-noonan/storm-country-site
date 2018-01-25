@@ -511,9 +511,9 @@ unique input (unsafePerformIO . wolframsort)
 ```
 
 But `unsafePerformIO` *really* is unsafe! Our sort might be run once, or many times,
-or not at all. We might end up caching a transient HTTP error and continue returning
-it even when the WolframAlpha is back up. The timing of when the sort will run is unclear.
-Everything has become unpredictable and suspicious. If you write this
+or not at all. We might end up caching a transient HTTP error and continue "seeing"
+it even when the Wolfram Alpha server is back up. The timing of when the sort will run
+is unclear. Everything has become unpredictable and suspicious. If you write this
 code, there will inevitably be gnashing of teeth and rending of garments (yours).
 Let's move on.
 
@@ -593,7 +593,9 @@ uniqueM items wolframsort :: IO Bool
 ```
 
 What else can we do with this newfound power?
-We can run randomized sorting algorithms, using the [`Rand` monad](https://hackage.haskell.org/package/MonadRandom-0.5.1/docs/Control-Monad-Random-Lazy.html):
+We can run randomized sorting algorithms, using the [`Rand` monad](https://hackage.haskell.org/package/MonadRandom-0.5.1/docs/Control-Monad-Random-Lazy.html). For example, we could use
+the [Bogosort](https://en.wikipedia.org/wiki/Bogosort) joke-algorithm: randomly shuffle the
+list and check if the result is sorted yet!
 
 ```haskell
 bogosort :: Ord a => Vector a -> Rand (Vector a)
@@ -603,7 +605,12 @@ bogosort = _
 uniqueM items bogosort :: Rand Bool
 ```
 
-(well, we [probably can do better](https://en.wikipedia.org/wiki/Bogosort))
+Despite how it naturally reads, this isn't saying that `uniqueM items bogosort` will
+give us a random `Bool`. It means that we'll get a `Bool`, and in the process we will
+be making use of some random process. In fact, `uniqueM items bogosort` will always
+return the same result as `unique items bubblesort`, though the runtime will be randomized
+(and terrible!)
+
 
 We can even recover the original, non-monadic version of `unique`, using the
 `Identity` monad:
@@ -624,7 +631,7 @@ of the form
 
 ```haskell
 ieeesort :: Vector Double -> Maybe (Vector Double)
-ieeesort v = if (V.any isNaN) v
+ieeesort v = if V.any isNaN v
              then Nothing
              else Just (sort v)
 ```
