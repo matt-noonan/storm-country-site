@@ -183,10 +183,9 @@ skills:
 
   - category: Broadly
     skill:    |
-              ▻ Mathematics, software development, exposition.
+              ▻ Pure and applied mathematics, software development, exposition.
               ▻ Program analysis, binary analysis, machine learning.
               ▻ Software design, research and development, project management.
-              ▻ Differential equations, differential geometry, linear algebra, category theory.
 
   - category: Preferred languages
     skill:    "Haskell, C++, Python."
@@ -195,7 +194,7 @@ skills:
     skill:    "Objective C, machine code (x86, ARM), C, Scheme, Common Lisp, OCaml."
 
   - category: Expository
-    skill:    "Public speaking, teaching complex subject matter, proposal writing, informal writing."
+    skill:    "Public speaking, teaching, proposal writing, informal writing."
 
   - category: Less marketable
     skill:    "Clawhammer banjo, baking, Go (AGA 2 dan), sailing (poorly)."
@@ -213,6 +212,11 @@ publications:
             Design and Implementation (PLDI '16).
     url:    "https://arxiv.org/abs/1603.05495"
 
+  - title:  "Polymorphic Type Inference for Machine Code (slides)"
+    when:   "2016"
+    where:  ""
+    url:    "https://github.com/emeryberger/PLDI-2016/raw/master/presentations/pldi16-presentation241.pdf"
+    
   - title:  "Geometric Bäcklund Transformations in Homogeneous Spaces"
     when:   "2012"
     where:  >

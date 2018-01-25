@@ -1,0 +1,6 @@
+RewriteEngine on
+
+AddHandler application/x-httpd-php56 .php
+AddHandler fcgid-script .fcgi
+RewriteCond %{HTTP_HOST} ^www\.band\.storm\-country\.com$
+RewriteRule ^\?$ http://band.storm-country.com [R=301,L]

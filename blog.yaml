@@ -2,18 +2,36 @@
 - title:  "LambdaCase in the wild"
   page:   LambdaCase
   source: LambdaCase.md
-  tags:   [ TEST ]
+  tags:   [ haskell, hackage ]
   date:
     month: 1
-    day:   8
+    day:   19
     year:  2018
-
+  published: yes
+  
 - title:  "Putting the \"algebra\" back in F-algebras"
-  page:   test
-  source: test.md
-  tags:   [ TEST ]
+  page:   lawful-f-algebras
+  source: lawful-f-algebras.md
+  tags:   [ haskell, c++, f-algebras ]
   date:
     month: 1
     day:   13
     year:  2018
+  published: no
 
+- title:  "Unnamed Euler thing"
+  page:   euler-root
+  source: euler-root.md
+  tags:   [ haskell, euler ]
+  date:
+    month: 1
+    day:   13
+    year:  2018
+  published: no
+
+- title:  "Design Patterns in Haskell: Part 1: The Strategy Pattern"
+  page:   gof-strategy
+  source: gof-strategy.md
+  tags:   [ haskell, c++, design-patterns ]
+  date:   { month: 1, day: 23, year: 2018 }
+  published: yes
