@@ -530,8 +530,8 @@ uniqueIO :: Eq a
          -> IO Bool
          
 uniqueIO input sort =
-  if V.null sorted then return True
-                   else check
+  if V.null input then return True
+                  else check
   where
     check = do
       sorted <- sort input
@@ -569,8 +569,8 @@ uniqueM :: (Eq a, Monad m)
         -> m Bool
             
 uniqueM input sort =
-  if V.null sorted then return True
-                   else check
+  if V.null input then return True
+                  else check
   where
     check = do
       sorted <- sort input
