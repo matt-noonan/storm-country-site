@@ -1,5 +1,5 @@
 *Note: This is part one of a series of posts translating the Gang of Four design patterns
-for object-oriented languages into Haskell. It is intended to be an expansion of Ed Yang's
+for object-oriented languages into Haskell. It is intended to be an expansion of Edward Z. Yang's
 [Design Patterns in Haskell](http://blog.ezyang.com/2010/05/design-patterns-in-haskel/),
 elaborating each pattern into its own post.*
 
@@ -18,9 +18,9 @@ are given. Even lowly bubblesort can [beat the competition](https://www.toptal.c
 variants of `unique`, making use of different sorting algorithms internally.
 
 ```c++
-vector<int> mergesort(vector<int> const&);
+vector<int> bubblesort(vector<int> const&);
 
-vector<int> quicksort(vector<int> const&);
+vector<int> mergesort(vector<int> const&);
 
 bool unique_via_bubblesort(vector<int> const& input)
 {
@@ -153,10 +153,10 @@ mergesort  :: Vector Int -> Vector Int
 unique :: Vector Int -> (Vector Int -> Vector Int) -> Bool
 unique input sort =
   if V.null sorted then True
-                   else (V.and matchesNext)
+                   else (V.and hasDistinctNeighbor)
   where
     sorted = sort input
-    matchesNext = V.zipWith (/=) sorted (V.tail sorted)
+    hasDistinctNeighbor = V.zipWith (/=) sorted (V.tail sorted)
 
 -- Usage:
 --
@@ -295,10 +295,10 @@ Our generalized Haskell example now looks like this:
 unique :: Eq a => Vector a -> (Vector a -> Vector a) -> Bool
 unique input sort =
   if V.null sorted then True
-                   else (V.and matchesNext)
+                   else (V.and hasDistinctNeighbor)
   where
     sorted = sort input
-    matchesNext = V.zipWith (/=) sorted (V.tail sorted)
+    hasDistinctNeighbor = V.zipWith (/=) sorted (V.tail sorted)
 
 -- Usage:
 --
@@ -449,10 +449,10 @@ sortUsing MergeSort  = _
 unique :: Eq a => Vector a -> SortStrategy -> Bool
 unique input strategy =
   if V.null sorted then True
-                   else (V.and matchesNext)
+                   else (V.and hasDistinctNeighbor)
   where
     sorted = sortUsing strategy input
-    matchesNext = V.zipWith (/=) sorted (V.tail sorted)
+    hasDistinctNeighbor = V.zipWith (/=) sorted (V.tail sorted)
 
 -- Usage:
 --
@@ -535,8 +535,8 @@ uniqueIO input sort =
   where
     check = do
       sorted <- sort input
-      let matchesNext = V.zipWith (/=) sorted (V.tail sorted)
-      return (V.and matchesNext)
+      let hasDistinctNeighbor = V.zipWith (/=) sorted (V.tail sorted)
+      return (V.and hasDistinctNeighbor)
 
 -- Usage:
 --
@@ -574,8 +574,8 @@ uniqueM input sort =
   where
     check = do
       sorted <- sort input
-      let matchesNext = V.zipWith (/=) sorted (V.tail sorted)
-      return (V.and matchesNext)
+      let hasDistinctNeighbor = V.zipWith (/=) sorted (V.tail sorted)
+      return (V.and hasDistinctNeighbor)
 ```
 
 Does the body of `uniqueM` look familiar? It is *exactly* the same body we used
@@ -606,7 +606,7 @@ uniqueM items bogosort :: Rand Bool
 ```
 
 Despite how it naturally reads, this isn't saying that `uniqueM items bogosort` will
-give us a random `Bool`. It means that we'll get a `Bool`, and in the process we will
+give us a random `Bool`. It means that we'll get a `Bool`, and along the way we will
 be making use of some random process. In fact, `uniqueM items bogosort` will always
 return the same result as `unique items bubblesort`, though the runtime will be randomized
 (and terrible!)

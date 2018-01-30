@@ -316,4 +316,44 @@ T \times T \times T @>{id \times op}>> T \times T\\\\
 T \times T @>{op}>> T
 \end{CD}$$
 
-jaxxxok
+# First-class interfaces
+
+```haskell
+(⨯) :: (IntF a -> a) -> (IntF b -> b) -> (IntF (a,b) -> (a,b))
+
+(f ⨯ g) Zero = (f Zero, g Zero)
+
+(f ⨯ g) One  = (f One,  g One)
+
+(f ⨯ g) (Add (x,x') (y,y'))  = (f (Add x y),  g (Add x' y'))
+
+(f ⨯ g) (Mul (x,x') (y,y'))  = (f (Mul x y),  g (Mul x' y'))
+
+(f ⨯ g) (Neg (x,x')) = (f (Neg x), g (Neg x'))
+```
+
+```c++
+template <typename A, typename B>
+pair<A,B> alg (IntF<int> const& v)
+{
+  if ( holds_alternative<Zero<int>>(v) ) {
+      return 0;
+  }
+  else if ( holds_alternative<One<int>>(v) ) {
+      return 1;
+  }
+  else if ( holds_alternative<Add<int>>(v) ) {
+      auto add = get<Add<int>>(v);
+      return add.x + add.y;
+  }
+  else if ( holds_alternative<Mul<int>>(v) ) {
+      auto mul = get<Mul<int>>(v);
+      return mul.x * mul.y;
+  }
+  else {
+    assert ( holds_alternative<Neg<int>>(v) );
+    auto neg = get<Neg<int>>(v);
+    return -neg.x;
+  }
+}
+```
