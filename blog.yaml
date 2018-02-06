@@ -36,9 +36,10 @@
   date:   { month: 1, day: 23, year: 2018 }
   published: yes
 
-- title:  "Pythag"
-  page:   pythagorean-theorem
-  source: pythagorean-theorem.md
-  tags:   [ interactive, dimensional-analysis ]
-  date:   { month: 1, day: 29, year: 2018 }
-  published: no
+- title:  "Abstract is Simple"
+  page:   abstract-is-simple
+  source: abstract-is-simple.md
+  tags:   [ interactive, math, software-engineering ]
+  date:   { month: 2, day: 5, year: 2018 }
+  published: yes
+  script: abstract-is-simple.js
