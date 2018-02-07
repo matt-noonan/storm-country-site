@@ -294,8 +294,8 @@ Our generalized Haskell example now looks like this:
 ```haskell
 unique :: Eq a => Vector a -> (Vector a -> Vector a) -> Bool
 unique input sort =
-  if V.null sorted then True
-                   else (V.and hasDistinctNeighbor)
+  if V.null input then True
+                  else (V.and hasDistinctNeighbor)
   where
     sorted = sort input
     hasDistinctNeighbor = V.zipWith (/=) sorted (V.tail sorted)
@@ -448,8 +448,8 @@ sortUsing MergeSort  = _
 
 unique :: Eq a => Vector a -> SortStrategy -> Bool
 unique input strategy =
-  if V.null sorted then True
-                   else (V.and hasDistinctNeighbor)
+  if V.null input then True
+                  else (V.and hasDistinctNeighbor)
   where
     sorted = sortUsing strategy input
     hasDistinctNeighbor = V.zipWith (/=) sorted (V.tail sorted)
