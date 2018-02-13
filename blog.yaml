@@ -43,3 +43,11 @@
   date:   { month: 2, day: 5, year: 2018 }
   published: yes
   script: abstract-is-simple.js
+
+- title:  "Evolving a Decompiler"
+  page:   evo-deco
+  source: evo-deco.md
+  tags:   [ decompiler, genetic-programming ]
+  date:   { month: 2, day: 12, year: 2018 }
+  published: yes
+  

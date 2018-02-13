@@ -115,7 +115,7 @@ an axiom of Euclidean geometry, at least for "nice enough" figures.
 Recall the Pythagorean theorem that we all know and love (or perhaps just tolerate):
 <div class="alert alert-secondary">
 <strong>Theorem:</strong> Suppose a right triangle has side lengths \(a\), \(b\), and \(c\), where
-\(c\) is the length of the longest side. Then $$ c^2 = a^2 + c^2 $$
+\(c\) is the length of the longest side. Then $$ c^2 = a^2 + b^2 $$
 </div>
 
 We're going to collaborate to create a simple proof of a *generalized* Pythagorean theorem,

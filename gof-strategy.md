@@ -152,8 +152,8 @@ mergesort  :: Vector Int -> Vector Int
 
 unique :: Vector Int -> (Vector Int -> Vector Int) -> Bool
 unique input sort =
-  if V.null sorted then True
-                   else (V.and hasDistinctNeighbor)
+  if V.null input then True
+                  else (V.and hasDistinctNeighbor)
   where
     sorted = sort input
     hasDistinctNeighbor = V.zipWith (/=) sorted (V.tail sorted)
